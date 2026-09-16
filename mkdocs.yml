@@ -1,0 +1,100 @@
+site_name: Introducció a la Programació amb Python
+site_description: Optativa de 2n d'ASIX/DAW semipresencial · IES Maria Enríquez (Gandia) · Curs 2026-2027
+site_author: Samuel Viel Malonda
+# ⚠️ Canvia-ho per l'adreça real de GitHub Pages
+site_url: https://samuelviel.github.io/curs-python/
+repo_url: https://github.com/samuelviel/curs-python
+repo_name: samuelviel/curs-python
+edit_uri: edit/main/docs/
+copyright: 2026 Samuel Viel Malonda · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">CC BY-NC-SA 4.0</a> · Idea basada en el curs d'<a href="https://enriqueiborra.github.io/python/index.html">Enrique Iborra</a>
+
+theme:
+  name: material
+  language: ca
+  font: false          # les fonts es carreguen des de curs.css
+  icon:
+    logo: material/language-python
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Canvia a mode fosc
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Canvia a mode clar
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: es
+
+extra_css:
+  - assets/css/curs.css
+
+extra_javascript:
+  - assets/js/curs.js
+  - assets/js/curs-app.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        # ```pyrun  → bloc de Python executable al navegador
+        - name: pyrun
+          class: pyrun
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        # ```quiz   → qüestionari (JSON)
+        - name: quiz
+          class: quiz
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Inici: index.md
+  - El curs:
+      - Com funciona: guia.md
+      - Calendari: calendari.md
+      - Recursos: recursos.md
+  - Temari:
+      - "00 · Prepara l'entorn": unitats/entorn.md
+      - "UD0 · Pensament computacional": unitats/ud0.md
+      - "UD1 · Primers passos": unitats/ud1.md
+      - "UD2 · Decisions i bucles": unitats/ud2.md
+      - "UD3 · Funcions i mòduls": unitats/ud3.md
+      - "UD4 · Cadenes, llistes i diccionaris": unitats/ud4.md
+      - "UD5 · Fitxers i scripts": unitats/ud5.md
+      - "UD6 · Objectes i classes": unitats/ud6.md
+      - "Projecte final": unitats/projecte.md
