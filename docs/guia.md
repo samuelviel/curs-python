@@ -25,9 +25,9 @@ Hi ha **una classe cada setmana**, a l'<span data-c="aula"></span>, i el torn s'
 | Senar | Dimecres | 14:20 – 15:15 | Matí |
 | Parella | Dijous | 15:15 – 16:10 | Vesprada |
 
-**Cada classe avança temari**: la sessió del dimecres i la del dijous següent tracten continguts diferents. Si només pots vindre a un dels dos torns, no passa res: tens els apunts en aquesta web i, després de cada classe, el resum i el codi que hem fet es pengen a Aules.
+**Cada classe avança temari**: la sessió del dimecres i la del dijous següent tracten continguts diferents. Si només pots vindre a un dels dos torns, no passa res: tens els apunts en aquesta web.
 
-Consulta sempre el [calendari](calendari.md): les sessions estan numerades (S1, S2…) i els festius de Gandia ja estan descomptats.
+Consulta sempre el [calendari](calendari.md): les sessions estan numerades (S1, S2…) i els festius ja estan descomptats.
 
 !!! tip "Com traure-li profit a una hora"
 
@@ -36,7 +36,7 @@ Consulta sempre el [calendari](calendari.md): les sessions estan numerades (S1, 
 ## La teua setmana, pas a pas
 
 1. **Abans de la classe.** Mira al calendari quin tema toca, llig l'apartat en aquesta web i executa els exemples.
-2. **A classe** (o amb el resum d'Aules si no pots vindre). Programem un exemple complet i resolem dubtes.
+2. **A classe** Programem un exemple complet i resolem dubtes.
 3. **Després.** Fes els exercicis de l'apartat: primer en paper, després a Thonny.
 4. **En acabar cada unitat.** Fes el qüestionari d'autoavaluació i lliura la tasca d'Aules abans que tanque.
 
@@ -45,14 +45,12 @@ Consulta sempre el [calendari](calendari.md): les sessions estan numerades (S1, 
 | Necessites… | Ho trobes a… |
 |---|---|
 | Apunts, exemples, exercicis i qüestionaris | Aquesta web |
-| Resum i codi de cada classe | <a data-c="aules" href="#">Aules</a> |
 | Tasques puntuables i lliuraments | Aules |
-| Avisos oficials (dates d'examen, canvis) | Fòrum d'avisos d'Aules (subscripció obligatòria) |
+| Avisos oficials (dates d'examen, canvis) | Fòrum d'avisos d'Aules (subscripció obligatòria) o <a data-c="correu" href="#"></a>|
 | Dubtes sobre el temari | Fòrum de dubtes d'Aules |
-| Temes personals | Missatge privat d'Aules o <a data-c="correu" href="#"></a> |
 | Matrícula, convalidacions, Web Família | Tutoria del grup, secretaria o direcció d'estudis |
 
-Si necessites una **tutoria individual** (presencial o per videoconferència), demana cita per Aules indicant quan et va bé.
+Si necessites una **tutoria individual** (presencial o per videoconferència), demana cita per correu electrònic indicant quan et va bé.
 
 ## Què s'avalua: resultats d'aprenentatge
 
