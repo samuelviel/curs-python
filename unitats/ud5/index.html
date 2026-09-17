@@ -1,0 +1,1683 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Optativa de 2n d'ASIX/DAW semipresencial · IES Maria Enríquez (Gandia) · Curs 2026-2027">
+      
+      
+        <meta name="author" content="Samuel Viel Malonda">
+      
+      
+        <link rel="canonical" href="https://samuelviel.github.io/curs-python/unitats/ud5/">
+      
+      
+        <link rel="prev" href="../ud4/">
+      
+      
+        <link rel="next" href="../ud6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fitxers i scripts de sistema - Introducció a la Programació amb Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/curs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fitxers-i-scripts-de-sistema" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Introducció a la Programació amb Python" class="md-header__button md-logo" aria-label="Introducció a la Programació amb Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducció a la Programació amb Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fitxers i scripts de sistema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Canvia a mode fosc"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode fosc" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Canvia a mode clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/samuelviel/curs-python" title="Ves al repositori" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    samuelviel/curs-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inici
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guia/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  El curs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../entorn/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Temari
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducció a la Programació amb Python" class="md-nav__button md-logo" aria-label="Introducció a la Programació amb Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    Introducció a la Programació amb Python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/samuelviel/curs-python" title="Ves al repositori" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    samuelviel/curs-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El curs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    El curs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Com funciona
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../calendari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendari
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temari
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Temari
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entorn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 · Prepara l'entorn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD0 · Pensament computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 · Primers passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 · Decisions i bucles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 · Funcions i mòduls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 · Cadenes, llistes i diccionaris
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 · Fitxers i scripts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 · Fitxers i scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-aprendras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què aprendràs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què aprendràs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-daquesta-unitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions d'aquesta unitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obrir-un-fitxer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obrir un fitxer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escriure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escriure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Llegir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Llegir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-fitxer-no-existeix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si el fitxer no existeix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fitxers-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitxers CSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rutes-i-carpetes-pathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rutes i carpetes: pathlib
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts de sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts de sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#espai-en-disc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espai en disc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-ordres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executar ordres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-des-del-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments des del terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercicis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasca-daules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasca d'Aules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprova-ho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprova-ho
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD6 · Objectes i classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projecte final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-aprendras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què aprendràs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què aprendràs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-daquesta-unitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions d'aquesta unitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obrir-un-fitxer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obrir un fitxer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escriure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escriure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Llegir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Llegir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-fitxer-no-existeix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si el fitxer no existeix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fitxers-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitxers CSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rutes-i-carpetes-pathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rutes i carpetes: pathlib
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts de sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts de sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#espai-en-disc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espai en disc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-ordres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executar ordres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-des-del-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments des del terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercicis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasca-daules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasca d'Aules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprova-ho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprova-ho
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p class="unit-num">Unitat 5</p>
+
+<h1 id="fitxers-i-scripts-de-sistema">Fitxers i scripts de sistema<a class="headerlink" href="#fitxers-i-scripts-de-sistema" title="Permanent link">&para;</a></h1>
+<p class="unit-meta"><span class="chip ra">RA5</span> <span class="chip" data-unit-chip="ud5"></span> <span class="chip">≈ 6 hores de treball</span></p>
+
+<p>Les dades que viuen només en variables desapareixen en tancar el programa. Ara llegirem logs, guardarem informes i escriurem scripts que es poden llançar des del terminal.</p>
+<h2 id="que-aprendras">Què aprendràs<a class="headerlink" href="#que-aprendras" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Obrir, llegir i escriure fitxers de text amb <code>with open()</code>.</li>
+<li>Llegir i generar fitxers CSV.</li>
+<li>Moure't per carpetes amb <code>pathlib</code>.</li>
+<li>Fer scripts que reben arguments i executen ordres del sistema.</li>
+</ul>
+<h3 id="sessions-daquesta-unitat">Sessions d'aquesta unitat<a class="headerlink" href="#sessions-daquesta-unitat" title="Permanent link">&para;</a></h3>
+<div class="unit-sessions" data-unit-sessions="ud5" markdown="0"></div>
+
+<h2 id="obrir-un-fitxer">Obrir un fitxer<a class="headerlink" href="#obrir-un-fitxer" title="Permanent link">&para;</a></h2>
+<p>La forma correcta és amb <code>with</code>: el fitxer es tanca sol en acabar el bloc, encara que hi haja un error.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Per a què</th>
+<th>Si el fitxer no existeix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"r"</code></td>
+<td>Llegir (per defecte)</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><code>"w"</code></td>
+<td>Escriure des de zero (esborra el que hi havia!)</td>
+<td>El crea</td>
+</tr>
+<tr>
+<td><code>"a"</code></td>
+<td>Afegir al final</td>
+<td>El crea</td>
+</tr>
+</tbody>
+</table>
+<p>Indica sempre <code>encoding="utf-8"</code> perquè els accents es vegen bé en Windows i Linux.</p>
+<h2 id="escriure">Escriure<a class="headerlink" href="#escriure" title="Permanent link">&para;</a></h2>
+<pre class="pyrun"><code>with open("equips.txt", "w", encoding="utf-8") as f:
+    f.write("web01\n")
+    f.write("bd01\n")
+
+with open("equips.txt", "a", encoding="utf-8") as f:
+    f.write("dns01\n")
+
+print("Fitxer escrit")</code></pre>
+<p><code>write()</code> no afig salt de línia: posa tu el <code>\n</code>.</p>
+<h2 id="llegir">Llegir<a class="headerlink" href="#llegir" title="Permanent link">&para;</a></h2>
+<p>La manera més habitual és recórrer el fitxer línia a línia amb <code>for</code>. Cada línia porta el <code>\n</code> final: lleva'l amb <code>strip()</code>.</p>
+<pre class="pyrun"><code># Creem un log d'exemple
+with open("auth.log", "w", encoding="utf-8") as f:
+    f.write("""Oct 15 10:01:02 srv sshd[811]: Failed password for root from 203.0.113.7 port 52211 ssh2
+Oct 15 10:01:09 srv sshd[811]: Failed password for root from 203.0.113.7 port 52213 ssh2
+Oct 15 10:02:11 srv sshd[902]: Accepted password for anna from 10.0.213.5 port 40022 ssh2
+Oct 15 10:03:40 srv sshd[915]: Failed password for admin from 198.51.100.2 port 60001 ssh2
+Oct 15 10:03:44 srv sshd[915]: Failed password for root from 203.0.113.7 port 52290 ssh2
+""")
+
+# L'analitzem
+fallits = {}
+with open("auth.log", encoding="utf-8") as f:
+    for linia in f:
+        if "Failed password" in linia:
+            ip = linia.split(" from ")[1].split()[0]
+            fallits[ip] = fallits.get(ip, 0) + 1
+
+for ip, n in fallits.items():
+    print(f"{ip:&lt;15} {n} intents fallits")</code></pre>
+<p>Altres formes: <code>f.read()</code> torna tot el fitxer en un sol text i <code>f.readlines()</code>, una llista de línies. Per a fitxers grans, el <code>for</code> és millor perquè no carrega tot en memòria.</p>
+<h3 id="si-el-fitxer-no-existeix">Si el fitxer no existeix<a class="headerlink" href="#si-el-fitxer-no-existeix" title="Permanent link">&para;</a></h3>
+<pre class="pyrun"><code>try:
+    with open("no_existeix.txt", encoding="utf-8") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("No trobe el fitxer. Comprova el nom i la carpeta.")</code></pre>
+<h2 id="fitxers-csv">Fitxers CSV<a class="headerlink" href="#fitxers-csv" title="Permanent link">&para;</a></h2>
+<p>Un <strong>CSV</strong> és una taula en text: una fila per línia i les columnes separades per comes. S'obri amb LibreOffice Calc o Excel. El mòdul <code>csv</code> s'encarrega de les cometes i els separadors.</p>
+<pre class="pyrun"><code>import csv
+
+inventari = [
+    {"nom": "web01", "ip": "10.0.0.10", "ram": 8},
+    {"nom": "bd01", "ip": "10.0.0.20", "ram": 32},
+]
+
+# Escriure
+with open("inventari.csv", "w", newline="", encoding="utf-8") as f:
+    w = csv.DictWriter(f, fieldnames=["nom", "ip", "ram"])
+    w.writeheader()
+    w.writerows(inventari)
+
+# Llegir
+with open("inventari.csv", newline="", encoding="utf-8") as f:
+    for fila in csv.DictReader(f):
+        print(fila["nom"], "→", fila["ip"], f"({fila['ram']} GB)")</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Tot el que llegeixes és text</p>
+<p>Des d'un CSV, <code>fila["ram"]</code> és <code>"8"</code>, no <code>8</code>. Converteix-lo amb <code>int()</code> abans de sumar.</p>
+</div>
+<h2 id="rutes-i-carpetes-pathlib">Rutes i carpetes: pathlib<a class="headerlink" href="#rutes-i-carpetes-pathlib" title="Permanent link">&para;</a></h2>
+<p><code>pathlib</code> treballa amb rutes igual en Windows i Linux, sense preocupar-te per les barres.</p>
+<pre class="pyrun"><code>from pathlib import Path
+
+carpeta = Path("informes")
+carpeta.mkdir(exist_ok=True)                  # crea si no existeix
+
+(carpeta / "dilluns.txt").write_text("ok\n", encoding="utf-8")
+(carpeta / "dimarts.txt").write_text("error disc\n", encoding="utf-8")
+
+for fitxer in sorted(carpeta.glob("*.txt")):
+    print(fitxer.name, fitxer.stat().st_size, "bytes")
+
+print("Existeix dimecres?", (carpeta / "dimecres.txt").exists())</code></pre>
+<table>
+<thead>
+<tr>
+<th>Codi</th>
+<th>Què fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Path.home()</code></td>
+<td>La carpeta de l'usuari</td>
+</tr>
+<tr>
+<td><code>p.exists()</code> · <code>p.is_file()</code> · <code>p.is_dir()</code></td>
+<td>Comprovacions</td>
+</tr>
+<tr>
+<td><code>p.name</code> · <code>p.suffix</code> · <code>p.parent</code></td>
+<td>Nom, extensió, carpeta pare</td>
+</tr>
+<tr>
+<td><code>p.glob("*.log")</code> · <code>p.rglob("*.log")</code></td>
+<td>Buscar fitxers (rglob, també en subcarpetes)</td>
+</tr>
+<tr>
+<td><code>p.read_text()</code> · <code>p.write_text()</code></td>
+<td>Llegir o escriure tot d'una vegada</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scripts-de-sistema">Scripts de sistema<a class="headerlink" href="#scripts-de-sistema" title="Permanent link">&para;</a></h2>
+<p>Aquests exemples depenen del sistema operatiu real: executa'ls a Thonny o al terminal.</p>
+<h3 id="espai-en-disc">Espai en disc<a class="headerlink" href="#espai-en-disc" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">total</span><span class="p">,</span> <span class="n">usat</span><span class="p">,</span> <span class="n">lliure</span> <span class="o">=</span> <span class="n">shutil</span><span class="o">.</span><span class="n">disk_usage</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Disc: </span><span class="si">{</span><span class="n">usat</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% ocupat, </span><span class="si">{</span><span class="n">lliure</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="si">}</span><span class="s2"> GB lliures"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="executar-ordres">Executar ordres<a class="headerlink" href="#executar-ordres" title="Permanent link">&para;</a></h3>
+<p><code>subprocess.run</code> llança una ordre del sistema i et permet llegir-ne el resultat.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span><span class="o">,</span><span class="w"> </span><span class="nn">platform</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">param</span> <span class="o">=</span> <span class="s2">"-n"</span> <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"Windows"</span> <span class="k">else</span> <span class="s2">"-c"</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">res</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"ping"</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">,</span> <span class="s2">"8.8.8.8"</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">if</span> <span class="n">res</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hi ha connexió"</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Sense resposta"</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Seguretat</p>
+<p>Passa l'ordre com una llista, com a l'exemple. No construïsques ordres ajuntant text que ha escrit l'usuari: és la porta d'entrada a una injecció d'ordres.</p>
+</div>
+<h3 id="arguments-des-del-terminal">Arguments des del terminal<a class="headerlink" href="#arguments-des-del-terminal" title="Permanent link">&para;</a></h3>
+<p><code>sys.argv</code> és una llista amb el nom del script i els arguments que li passes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env python3</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># comptar_linies.py · Ús: ./comptar_linies.py fitxer.log</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Ús: comptar_linies.py FITXER"</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> línies"</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>comptar_linies.py
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>./comptar_linies.py<span class="w"> </span>/var/log/syslog
+</code></pre></div>
+<p>La primera línia (<em>shebang</em>) diu a Linux amb quin intèrpret s'ha d'executar. Amb <code>crontab -e</code> pots programar-lo perquè s'execute sol cada nit.</p>
+<h2 id="exercicis">Exercicis<a class="headerlink" href="#exercicis" title="Permanent link">&para;</a></h2>
+<h4 id="1-diari-dincidencies-basic">1. Diari d'incidències <span class="nivell n1">Bàsic</span><a class="headerlink" href="#1-diari-dincidencies-basic" title="Permanent link">&para;</a></h4>
+<p>Demana una descripció i l'afig a <code>incidencies.txt</code> amb la data i hora davant. Cada execució afig una línia nova.</p>
+<h4 id="2-informe-de-latencies-basic">2. Informe de latències <span class="nivell n1">Bàsic</span><a class="headerlink" href="#2-informe-de-latencies-basic" title="Permanent link">&para;</a></h4>
+<p>Llegeix un fitxer amb un número per línia i mostra la mitjana, la mínima i la màxima.</p>
+<h4 id="3-detector-datacs-mitja">3. Detector d'atacs <span class="nivell n2">Mitjà</span><a class="headerlink" href="#3-detector-datacs-mitja" title="Permanent link">&para;</a></h4>
+<p>A partir de l'exemple d'<code>auth.log</code>, mostra només les IP amb 3 o més intents fallits i guarda-les a <code>bloquejar.txt</code>, una per línia.</p>
+<h4 id="4-inventari-persistent-mitja">4. Inventari persistent <span class="nivell n2">Mitjà</span><a class="headerlink" href="#4-inventari-persistent-mitja" title="Permanent link">&para;</a></h4>
+<p>Modifica la tasca T5 perquè l'inventari es carregue d'<code>inventari.csv</code> en arrancar i es guarde en eixir.</p>
+<h4 id="5-copia-de-seguretat-amb-data-repte">5. Còpia de seguretat amb data <span class="nivell n3">Repte</span><a class="headerlink" href="#5-copia-de-seguretat-amb-data-repte" title="Permanent link">&para;</a></h4>
+<p>Script que rep una carpeta per argument i en fa un ZIP amb el nom <code>copia_AAAAMMDD_HHMM.zip</code>. Pista: <code>shutil.make_archive</code> i <code>datetime.now().strftime()</code>.</p>
+<h2 id="tasca-daules">Tasca d'Aules<a class="headerlink" href="#tasca-daules" title="Permanent link">&para;</a></h2>
+<div class="admonition tasca">
+<p class="admonition-title">T6 · Analitzador de logs</p>
+<p>Lliura l'exercici 3 ampliat: el nom del fitxer de log es passa com a argument, i a més de <code>bloquejar.txt</code> genera un <code>resum.csv</code> amb les columnes <code>ip, intents, usuaris_provats</code>.</p>
+</div>
+<h2 id="comprova-ho">Comprova-ho<a class="headerlink" href="#comprova-ho" title="Permanent link">&para;</a></h2>
+<div class="quiz">[
+ {
+  "p": "Quin mode d'obertura esborra el contingut anterior del fitxer?",
+  "o": [
+   "\"r\"",
+   "\"a\"",
+   "\"w\"",
+   "Cap"
+  ],
+  "c": 2,
+  "e": "\"w\" escriu des de zero; per a afegir, usa \"a\"."
+ },
+ {
+  "p": "Per què usem with open(...) as f?",
+  "o": [
+   "És més ràpid",
+   "Tanca el fitxer automàticament",
+   "És obligatori en Linux",
+   "Per a llegir en binari"
+  ],
+  "c": 1,
+  "e": "El fitxer es tanca en eixir del bloc, fins i tot si hi ha errors."
+ },
+ {
+  "p": "Quin error es produeix si obris per a llegir un fitxer que no existeix?",
+  "o": [
+   "KeyError",
+   "IndexError",
+   "FileNotFoundError",
+   "ValueError"
+  ],
+  "c": 2,
+  "e": "FileNotFoundError."
+ },
+ {
+  "p": "Si llegeixes \"8\" d'un CSV i vols sumar-lo…",
+  "o": [
+   "Ja és un número",
+   "Cal fer int(\"8\")",
+   "Cal usar csv.int",
+   "No es pot"
+  ],
+  "c": 1,
+  "e": "Tot el que es llig d'un fitxer de text és str."
+ },
+ {
+  "p": "Què conté sys.argv[0]?",
+  "o": [
+   "El primer argument",
+   "El nom del script",
+   "El nombre d'arguments",
+   "L'usuari"
+  ],
+  "c": 1,
+  "pista": "Els arguments comencen a la posició 1.",
+  "e": "La posició 0 és el nom del script."
+ }
+]</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna a l'inici
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../ud4/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: UD4 · Cadenes, llistes i diccionaris">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                UD4 · Cadenes, llistes i diccionaris
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ud6/" class="md-footer__link md-footer__link--next" aria-label="Següent: UD6 · Objectes i classes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                UD6 · Objectes i classes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Samuel Viel Malonda · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">CC BY-NC-SA 4.0</a> · Idea basada en el curs d'<a href="https://enriqueiborra.github.io/python/index.html">Enrique Iborra</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/js/curs.js"></script>
+      
+        <script src="../../assets/js/curs-app.js"></script>
+      
+    
+  </body>
+</html>

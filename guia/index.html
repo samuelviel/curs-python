@@ -1,0 +1,1510 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Optativa de 2n d'ASIX/DAW semipresencial · IES Maria Enríquez (Gandia) · Curs 2026-2027">
+      
+      
+        <meta name="author" content="Samuel Viel Malonda">
+      
+      
+        <link rel="canonical" href="https://samuelviel.github.io/curs-python/guia/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../calendari/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Com funciona el curs - Introducció a la Programació amb Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/curs.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#com-funciona-el-curs" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="Introducció a la Programació amb Python" class="md-header__button md-logo" aria-label="Introducció a la Programació amb Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducció a la Programació amb Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Com funciona el curs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Canvia a mode fosc"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode fosc" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Canvia a mode clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/samuelviel/curs-python" title="Ves al repositori" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    samuelviel/curs-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inici
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  El curs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../unitats/entorn/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Temari
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Introducció a la Programació amb Python" class="md-nav__button md-logo" aria-label="Introducció a la Programació amb Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    Introducció a la Programació amb Python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/samuelviel/curs-python" title="Ves al repositori" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    samuelviel/curs-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El curs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    El curs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Com funciona
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Com funciona
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-aquesta-optativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és aquesta optativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-teua-setmana-pas-a-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La teua setmana, pas a pas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-esta-cada-cosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On està cada cosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-savalua-resultats-daprenentatge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què s'avalua: resultats d'aprenentatge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#com-es-calcula-la-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Com es calcula la nota
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Com es calcula la nota">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcio-1-avaluacio-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opció 1: avaluació contínua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcio-2-convocatoria-ordinaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opció 2: convocatòria ordinària
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convocatoria-extraordinaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convocatòria extraordinària
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intelligencia-artificial-el-semafor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intel·ligència artificial: el semàfor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normes-per-als-exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normes per als exercicis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendari
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temari
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Temari
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/entorn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 · Prepara l'entorn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD0 · Pensament computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 · Primers passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 · Decisions i bucles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 · Funcions i mòduls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 · Cadenes, llistes i diccionaris
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 · Fitxers i scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/ud6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD6 · Objectes i classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitats/projecte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projecte final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-aquesta-optativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és aquesta optativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-teua-setmana-pas-a-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La teua setmana, pas a pas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-esta-cada-cosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On està cada cosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-savalua-resultats-daprenentatge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què s'avalua: resultats d'aprenentatge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#com-es-calcula-la-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Com es calcula la nota
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Com es calcula la nota">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcio-1-avaluacio-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opció 1: avaluació contínua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcio-2-convocatoria-ordinaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opció 2: convocatòria ordinària
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convocatoria-extraordinaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convocatòria extraordinària
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intelligencia-artificial-el-semafor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intel·ligència artificial: el semàfor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normes-per-als-exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normes per als exercicis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p class="unit-num">Guia de l'alumnat</p>
+
+<h1 id="com-funciona-el-curs">Com funciona el curs<a class="headerlink" href="#com-funciona-el-curs" title="Permanent link">&para;</a></h1>
+<p class="unit-meta"><span class="chip">Curs <span data-c="curs"></span></span> <span class="chip">Professor: <span data-c="professor"></span></span> <span class="chip">Modalitat semipresencial</span></p>
+
+<p>Tot el que necessites saber per a organitzar-te: quan hi ha classe, què has de fer cada setmana i com es calcula la nota.</p>
+<h2 id="que-es-aquesta-optativa">Què és aquesta optativa<a class="headerlink" href="#que-es-aquesta-optativa" title="Permanent link">&para;</a></h2>
+<p><strong>Introducció a la Programació</strong> és un mòdul optatiu de segon curs pensat per a l'alumnat d'ASIX. L'objectiu no és que acabes sent desenvolupador, sinó que perdes la por al codi i sàpies escriure programes i <em>scripts</em> senzills que t'estalvien feina com a administrador de sistemes.</p>
+<p>Treballarem amb <strong>Python 3</strong> i l'editor <strong>Thonny</strong>. Començarem per pensar com un programador (algorismes i diagrames), i acabarem amb un xicotet projecte fet per tu.</p>
+<h2 id="les-classes">Les classes<a class="headerlink" href="#les-classes" title="Permanent link">&para;</a></h2>
+<p>Hi ha <strong>una classe cada setmana</strong>, a l'<span data-c="aula"></span>, i el torn s'alterna:</p>
+<table>
+<thead>
+<tr>
+<th>Setmana</th>
+<th>Dia</th>
+<th>Hora</th>
+<th>Torn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senar</td>
+<td>Dimecres</td>
+<td>14:20 – 15:15</td>
+<td>Matí</td>
+</tr>
+<tr>
+<td>Parella</td>
+<td>Dijous</td>
+<td>15:15 – 16:10</td>
+<td>Vesprada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cada classe avança temari</strong>: la sessió del dimecres i la del dijous següent tracten continguts diferents. Si només pots vindre a un dels dos torns, no passa res: tens els apunts en aquesta web.</p>
+<p>Consulta sempre el <a href="../calendari/">calendari</a>: les sessions estan numerades (S1, S2…) i els festius ja estan descomptats.</p>
+<div class="admonition tip">
+<p class="admonition-title">Com traure-li profit a una hora</p>
+<p>La classe no és una xarrada: els primers 15 minuts presente la idea clau i la resta de l'hora programem junts i resolem dubtes. Vine havent llegit, almenys per damunt, l'apartat de la sessió.</p>
+</div>
+<h2 id="la-teua-setmana-pas-a-pas">La teua setmana, pas a pas<a class="headerlink" href="#la-teua-setmana-pas-a-pas" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Abans de la classe.</strong> Mira al calendari quin tema toca, llig l'apartat en aquesta web i executa els exemples.</li>
+<li><strong>A classe</strong> Programem un exemple complet i resolem dubtes.</li>
+<li><strong>Després.</strong> Fes els exercicis de l'apartat: primer en paper, després a Thonny.</li>
+<li><strong>En acabar cada unitat.</strong> Fes el qüestionari d'autoavaluació i lliura la tasca d'Aules abans que tanque.</li>
+</ol>
+<h2 id="on-esta-cada-cosa">On està cada cosa<a class="headerlink" href="#on-esta-cada-cosa" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Necessites…</th>
+<th>Ho trobes a…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apunts, exemples, exercicis i qüestionaris</td>
+<td>Aquesta web</td>
+</tr>
+<tr>
+<td>Tasques puntuables i lliuraments</td>
+<td>Aules</td>
+</tr>
+<tr>
+<td>Avisos oficials (dates d'examen, canvis)</td>
+<td>Fòrum d'avisos d'Aules (subscripció obligatòria) o <a data-c="correu" href="#"></a></td>
+</tr>
+<tr>
+<td>Dubtes sobre el temari</td>
+<td>Fòrum de dubtes d'Aules</td>
+</tr>
+<tr>
+<td>Matrícula, convalidacions, Web Família</td>
+<td>Tutoria del grup, secretaria o direcció d'estudis</td>
+</tr>
+</tbody>
+</table>
+<p>Si necessites una <strong>tutoria individual</strong> (presencial o per videoconferència), demana cita per correu electrònic indicant quan et va bé.</p>
+<h2 id="que-savalua-resultats-daprenentatge">Què s'avalua: resultats d'aprenentatge<a class="headerlink" href="#que-savalua-resultats-daprenentatge" title="Permanent link">&para;</a></h2>
+<p>El mòdul té sis resultats d'aprenentatge (RA), fixats pel Decret 114/2025. Cada unitat indica quins treballa.</p>
+<table>
+<thead>
+<tr>
+<th>RA</th>
+<th>En poques paraules</th>
+<th>Pes</th>
+<th>Unitats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA1</td>
+<td>Reconeix l'estructura d'un programa i els seus elements</td>
+<td>10%</td>
+<td>UD0, UD1</td>
+</tr>
+<tr>
+<td>RA2</td>
+<td>Escriu i prova programes senzills; fonaments d'objectes</td>
+<td>20%</td>
+<td>UD1, UD3, UD6</td>
+</tr>
+<tr>
+<td>RA3</td>
+<td>Usa estructures de control i depura codi</td>
+<td>20%</td>
+<td>UD2</td>
+</tr>
+<tr>
+<td>RA4</td>
+<td>Organitza programes en classes</td>
+<td>20%</td>
+<td>UD6</td>
+</tr>
+<tr>
+<td>RA5</td>
+<td>Fa entrada i eixida d'informació; usa llibreries</td>
+<td>10%</td>
+<td>UD3, UD5</td>
+</tr>
+<tr>
+<td>RA6</td>
+<td>Manipula informació amb tipus de dades avançats</td>
+<td>20%</td>
+<td>UD4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="com-es-calcula-la-nota">Com es calcula la nota<a class="headerlink" href="#com-es-calcula-la-nota" title="Permanent link">&para;</a></h2>
+<h3 id="opcio-1-avaluacio-continua">Opció 1: avaluació contínua<a class="headerlink" href="#opcio-1-avaluacio-continua" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Apartat</th>
+<th>Pes</th>
+<th>Què és</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exàmens presencials</td>
+<td>80%</td>
+<td>Un per trimestre. Cal traure almenys un 3 en cadascun i un 4 en el de la 3a avaluació, perquè és acumulatiu.</td>
+</tr>
+<tr>
+<td>Tasques d'Aules</td>
+<td>15%</td>
+<td>Una per unitat i el projecte final. Lliurades en temps i forma.</td>
+</tr>
+<tr>
+<td>Participació en fòrums</td>
+<td>5%</td>
+<td>Preguntar, respondre i ajudar amb respecte.</td>
+</tr>
+</tbody>
+</table>
+<p>Aproves si la mitjana ponderada és igual o superior a 5. Les tasques es poden lliurar en qualsevol moment, però només puntuen per a l'avaluació contínua si es lliuren abans del tancament de cada trimestre.</p>
+<h3 id="opcio-2-convocatoria-ordinaria">Opció 2: convocatòria ordinària<a class="headerlink" href="#opcio-2-convocatoria-ordinaria" title="Permanent link">&para;</a></h3>
+<p>Un examen de tot el mòdul a principis de juny. La nota de l'examen és la nota final. També és la segona oportunitat si no has superat algun RA per contínua, o si vols pujar nota (es conserva la més alta).</p>
+<h3 id="convocatoria-extraordinaria">Convocatòria extraordinària<a class="headerlink" href="#convocatoria-extraordinaria" title="Permanent link">&para;</a></h3>
+<p>Examen amb les mateixes condicions que l'ordinària, a mitjan juny, per a qui no haja superat el mòdul.</p>
+<div class="admonition warning">
+<p class="admonition-title">Als exàmens</p>
+<p>Porta un document oficial amb foto (DNI, passaport o permís de conduir). Examen amb ordinador del centre, Thonny i sense Internet ni IA. Pots triar torn si hi ha places, preinscrivint-te a Aules.</p>
+</div>
+<p class="small-note">Aquest resum segueix la guia didàctica del mòdul. En cas de dubte, preval el document oficial publicat a Aules.</p>
+
+<h2 id="intelligencia-artificial-el-semafor">Intel·ligència artificial: el semàfor<a class="headerlink" href="#intelligencia-artificial-el-semafor" title="Permanent link">&para;</a></h2>
+<p>L'examen és presencial i sense ajuda, així que el que no practiques tu no ho sabràs fer aquell dia. Per això fem servir aquest criteri:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Situació</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b class="sem-v">Verd</b></td>
+<td>Entendre un concepte o un missatge d'error</td>
+<td>«Explica'm amb un exemple què vol dir <code>TypeError: can only concatenate str</code>»</td>
+</tr>
+<tr>
+<td><b class="sem-g">Groc</b></td>
+<td>Revisar codi teu que ja funciona</td>
+<td>«Com podria fer més llegible aquest bucle?», i després ho reescrius tu</td>
+</tr>
+<tr>
+<td><b class="sem-r">Roig</b></td>
+<td>Demanar la solució d'un exercici o tasca</td>
+<td>Copiar l'enunciat i enganxar la resposta. En les tasques, compta com a no lliurada</td>
+</tr>
+</tbody>
+</table>
+<p>A les tasques d'Aules pot ser que et demane explicar el teu codi en una tutoria. Si no saps explicar-lo, no és teu.</p>
+<h2 id="normes-per-als-exercicis">Normes per als exercicis<a class="headerlink" href="#normes-per-als-exercicis" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Pensa primer en paper: què entra, què ha de fer el programa i què ix.</li>
+<li>Usa només el que hem vist fins a la unitat actual. Si saps més, genial, però l'objectiu és practicar el que toca.</li>
+<li>Posa noms clars a les variables: <code>preu_total</code> millor que <code>x</code>.</li>
+<li>Prova amb dades normals i amb dades «dolentes» (un zero, un text buit, una lletra on esperaves un número).</li>
+<li>Lliura fitxers <code>.py</code> que s'executen sense errors, amb el teu nom en un comentari a la primera línia.</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna a l'inici
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inici">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Inici
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../calendari/" class="md-footer__link md-footer__link--next" aria-label="Següent: Calendari">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                Calendari
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Samuel Viel Malonda · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">CC BY-NC-SA 4.0</a> · Idea basada en el curs d'<a href="https://enriqueiborra.github.io/python/index.html">Enrique Iborra</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/js/curs.js"></script>
+      
+        <script src="../assets/js/curs-app.js"></script>
+      
+    
+  </body>
+</html>
