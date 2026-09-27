@@ -6,7 +6,6 @@
 
 window.CURS = {
   professor: "Samuel Viel Malonda",
-  // ⚠️ Posa el teu correu abans de publicar
   correu: "s.vielmalonda@edu.gva.es",
   aules: "https://aules.edu.gva.es/semipresencial",
   aula: "Aula 213",
@@ -45,6 +44,23 @@ window.CURS = {
     ]
   },
 
+  // Exàmens presencials. Cada avaluació té dues convocatòries, una per torn.
+  // El dia d'examen no hi ha classe ordinària: la sessió passa al següent dia lectiu.
+  examens: [
+    { av: "1a avaluació", conte: "De la S1 a la S10: entorn, UD0, UD1 i UD2.", proves: [
+      { data: "2026-11-19", torn: "matí", inici: "14:00", fi: "15:50" },
+      { data: "2026-11-26", torn: "vesprada", inici: "16:00", fi: "17:50" }
+    ] },
+    { av: "2a avaluació", conte: "UD3 i UD4 (cadenes, llistes i diccionaris), amb tot l'anterior com a base.", proves: [
+      { data: "2027-02-04", torn: "matí", inici: "14:00", fi: "15:50" },
+      { data: "2027-02-11", torn: "vesprada", inici: "16:00", fi: "17:50" }
+    ] },
+    { av: "3a avaluació", conte: "UD5 i UD6. En ser acumulatiu, cal traure almenys un 4.", proves: [
+      { data: "2027-05-06", torn: "matí", inici: "14:00", fi: "15:50" },
+      { data: "2027-05-13", torn: "vesprada", inici: "16:00", fi: "17:50" }
+    ] }
+  ],
+
   unitats: {
     entorn:   { n: "00",  titol: "Prepara l'entorn",               url: "unitats/entorn/" },
     ud0:      { n: "UD0", titol: "Pensament computacional",        url: "unitats/ud0/" },
@@ -58,28 +74,27 @@ window.CURS = {
   },
 
   // Les sessions, en ordre. Cada una ocupa el següent dia lectiu del calendari.
-  // examen: true → sessió de repàs (les dates d'examen es confirmen a Aules)
   sessions: [
+    // --- 1r trimestre, fins a l'examen de la 1a avaluació ---
     { tema: "Presentació del curs i entorn de treball", u: "entorn", nota: "Porta portàtil si en tens. Eixirem amb el primer programa funcionant." },
     { tema: "Algorismes i pensament computacional", u: "ud0", nota: "Sessió de llapis i paper." },
     { tema: "Pseudocodi, diagrames de flux i traça", u: "ud0" },
     { tema: "print, variables i tipus de dades", u: "ud1" },
-    { tema: "input i conversions de tipus", u: "ud1" },
-    { tema: "Operadors i f-strings", u: "ud1" },
+    { tema: "input, conversions i f-strings", u: "ud1" },
     { tema: "Condicions: if, elif, else", u: "ud2" },
     { tema: "Bucle while", u: "ud2" },
     { tema: "Bucle for i range", u: "ud2" },
     { tema: "Control d'errors (try) i depuració", u: "ud2" },
-    { tema: "Repàs del 1r trimestre", u: null, examen: true, nota: "Examen presencial de la 1a avaluació: data a Aules." },
-    { tema: "Simulacre i dubtes d'examen", u: null, examen: true },
+    { tema: "Repàs i simulacre de l'examen de la 1a avaluació", u: null, repas: true },
+    // --- fins a l'examen de la 2a avaluació ---
     { tema: "Funcions: def i paràmetres", u: "ud3" },
     { tema: "return i àmbit de les variables", u: "ud3" },
     { tema: "Mòduls i import", u: "ud3" },
     { tema: "Cadenes a fons", u: "ud4" },
     { tema: "Llistes", u: "ud4" },
-    { tema: "Recórrer i construir llistes", u: "ud4" },
-    { tema: "Repàs del 2n trimestre", u: null, examen: true, nota: "Examen presencial de la 2a avaluació: data a Aules." },
     { tema: "Diccionaris", u: "ud4" },
+    { tema: "Repàs i simulacre de l'examen de la 2a avaluació", u: null, repas: true },
+    // --- fins a l'examen de la 3a avaluació ---
     { tema: "Llistes de diccionaris: un inventari", u: "ud4" },
     { tema: "Llegir i escriure fitxers", u: "ud5" },
     { tema: "Fitxers CSV", u: "ud5" },
@@ -87,12 +102,13 @@ window.CURS = {
     { tema: "Scripts de sistema: arguments i ordres", u: "ud5" },
     { tema: "Classes i objectes", u: "ud6" },
     { tema: "Mètodes, __str__ i herència", u: "ud6" },
-    { tema: "Projecte final: plantejament", u: "projecte" },
+    { tema: "Repàs i simulacre de l'examen de la 3a avaluació", u: null, repas: true },
+    // --- després de l'examen de la 3a avaluació ---
+    { tema: "Projecte final: plantejament", u: "projecte", nota: "Porta triada l'opció de projecte." },
     { tema: "Projecte final: taller", u: "projecte" },
-    { tema: "Repàs del 3r trimestre", u: null, examen: true, nota: "Examen presencial de la 3a avaluació: data a Aules." },
     { tema: "Projecte final: lliurament i dubtes", u: "projecte" },
-    { tema: "Dubtes de la convocatòria ordinària", u: null, examen: true },
-    { tema: "Dubtes de la convocatòria extraordinària", u: null, examen: true },
-    { tema: "Tancament del curs", u: null }
+    { tema: "Dubtes de la convocatòria ordinària", u: null, repas: true },
+    { tema: "Dubtes de la convocatòria extraordinària", u: null, repas: true },
+    { tema: "Tancament del curs", u: null, nota: "El curs acaba el 18 de juny de 2027." }
   ]
 };

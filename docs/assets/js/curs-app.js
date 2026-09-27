@@ -55,9 +55,20 @@
       slots.push({ date: d, torn, off: offReason(d) });
     }
 
+    // Els exàmens ocupen el seu dia: eixe dia no hi ha classe ordinària.
+    const examRows = [];
+    (C.examens || []).forEach((ex) => ex.proves.forEach((p) => {
+      const d = parseDate(p.data);
+      const [h, m] = p.fi.split(":").map(Number);
+      const endTime = new Date(d); endTime.setHours(h, m, 0, 0);
+      examRows.push({ date: d, examen: ex, prova: p, end: endTime });
+    }));
+    const examDays = new Set(examRows.map((r) => r.date.getTime()));
+
     const rows = [];
     let i = 0;
     for (const s of slots) {
+      if (examDays.has(s.date.getTime())) continue;   // eixe dia hi ha examen
       if (s.off) { rows.push(s); continue; }
       if (i >= C.sessions.length) break;
       const ses = C.sessions[i];
@@ -67,7 +78,8 @@
       i++;
     }
     if (i < C.sessions.length) console.warn(`Calendari: falten ${C.sessions.length - i} dies de classe per a les sessions previstes.`);
-    PLA = { rows, sessions: rows.filter((r) => r.ses) };
+    const all = rows.concat(examRows).sort((a, b) => a.date - b.date);
+    PLA = { rows: all, sessions: rows.filter((r) => r.ses), examens: examRows, agenda: all.filter((r) => r.ses || r.examen) };
     return PLA;
   }
 
@@ -82,19 +94,41 @@
     if (!el) return;
     const C = window.CURS;
     const now = new Date();
-    const list = plan().sessions;
+    const list = plan().agenda;
     const idx = list.findIndex((s) => s.end > now);
     if (idx < 0) {
       el.innerHTML = `<div class="ticket-top"><div class="ticket-label">Tutories col·lectives</div><div class="ticket-date">Curs acabat</div></div>`;
       return;
     }
-    const s = list[idx], after = list[idx + 1], t = C.torns[s.torn];
+    const s = list[idx], after = list[idx + 1];
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const days = Math.round((s.date - today) / 86400000);
-    const when = days === 0 ? "Hui hi ha classe" : days === 1 ? "Pròxima classe: demà" : `Pròxima classe: d'ací ${days} dies`;
+    const quan = (n) => (n === 0 ? "hui" : n === 1 ? "demà" : `d'ací ${n} dies`);
+    const resum = (r) => (r.examen
+      ? `Examen de la ${r.examen.av} (${r.prova.torn})`
+      : `S${r.n} · ${r.ses.tema}`);
+
+    if (s.examen) {
+      el.innerHTML = `
+        <div class="ticket-top ticket-exam">
+          <div class="ticket-label">Examen ${quan(days)}</div>
+          <div class="ticket-date">${cap(fmtLong(s.date))}</div>
+          <div class="ticket-time">${s.prova.inici}–${s.prova.fi} · torn de ${s.prova.torn}</div>
+        </div>
+        <div class="ticket-cut" aria-hidden="true"></div>
+        <div class="ticket-bottom">
+          <div class="ticket-topic">Examen de la ${esc(s.examen.av)}</div>
+          ${s.examen.conte ? `<p>${esc(s.examen.conte)}</p>` : ""}
+          <p>Presencial, amb DNI. Eixe dia no hi ha classe ordinària. <a href="${baseUrl()}/calendari/">Calendari complet</a></p>
+          ${after ? `<p class="ticket-next">Després: ${fmtLong(after.date)} · ${esc(resum(after))}</p>` : ""}
+        </div>`;
+      return;
+    }
+
+    const t = C.torns[s.torn];
     el.innerHTML = `
       <div class="ticket-top">
-        <div class="ticket-label">${when}</div>
+        <div class="ticket-label">${days === 0 ? "Hui hi ha classe" : `Pròxima classe: ${quan(days)}`}</div>
         <div class="ticket-date">${cap(fmtLong(s.date))}</div>
         <div class="ticket-time">${t.inici}–${t.fi} · ${t.nom} · ${esc(C.aula)}</div>
       </div>
@@ -103,7 +137,7 @@
         <div class="ticket-topic">S${s.n} · ${esc(s.ses.tema)}</div>
         ${s.ses.nota ? `<p>${esc(s.ses.nota)}</p>` : ""}
         <p>${s.ses.u ? unitLink(s.ses.u, "Obri els apunts") + " · " : ""}<a href="${baseUrl()}/calendari/">Calendari complet</a></p>
-        ${after ? `<p class="ticket-next">Després: ${fmtLong(after.date)} (${C.torns[after.torn].nom}) · ${esc(after.ses.tema)}</p>` : ""}
+        ${after ? `<p class="ticket-next">Després: ${fmtLong(after.date)} · ${esc(resum(after))}</p>` : ""}
       </div>`;
   }
 
@@ -113,8 +147,8 @@
     if (!el) return;
     const C = window.CURS;
     const now = new Date();
-    const { rows, sessions } = plan();
-    const next = sessions.find((s) => s.end > now);
+    const { rows, agenda } = plan();
+    const next = agenda.find((s) => s.end > now);
     const groups = C.calendari.trimestres.map(([nom, a, b]) => ({
       nom, rows: rows.filter((r) => r.date >= parseDate(a) && r.date <= parseDate(b))
     }));
@@ -122,11 +156,21 @@
       <h2 id="${g.nom.replace(/\W+/g, "-").toLowerCase()}">${g.nom}</h2>
       <ol class="cal-list">
         ${g.rows.map((r) => {
+          if (r.examen) {
+            const cls = ["cal-exam", next === r ? "cal-now" : "", r.end < now ? "cal-past" : ""].join(" ").trim();
+            return `<li class="${cls}">
+              <span class="cal-n">EX</span>
+              <span class="cal-date">${cap(fmtLong(r.date))}<small>${r.prova.inici}–${r.prova.fi} · torn de ${esc(r.prova.torn)}</small></span>
+              <span class="cal-topic"><b>Examen de la ${esc(r.examen.av)}</b>
+                ${r.examen.conte ? `<small class="cal-note">${esc(r.examen.conte)}</small>` : ""}
+                <small class="cal-note">Presencial, amb DNI. Eixe dia no hi ha classe ordinària.</small></span>
+            </li>`;
+          }
           const t = C.torns[r.torn];
           if (!r.ses) {
             return `<li class="cal-off"><span class="cal-n"></span><span class="cal-date">${cap(fmtLong(r.date))}</span><span class="cal-topic">No lectiu · ${esc(r.off)}</span></li>`;
           }
-          const cls = [r.ses.examen ? "cal-exam" : "", next === r ? "cal-now" : "", r.end < now ? "cal-past" : ""].join(" ").trim();
+          const cls = [r.ses.repas ? "cal-repas" : "", next === r ? "cal-now" : "", r.end < now ? "cal-past" : ""].join(" ").trim();
           return `<li class="${cls}">
             <span class="cal-n">S${r.n}</span>
             <span class="cal-date">${cap(fmtLong(r.date))}<small>${t.inici} · ${t.nom}</small></span>
@@ -145,15 +189,42 @@
       const ss = plan().sessions.filter((s) => s.ses.u === el.dataset.unitChip);
       if (!ss.length) { el.remove(); return; }
       const a = ss[0], b = ss[ss.length - 1];
+      const seguides = ss.every((s, k) => k === 0 || s.n === ss[k - 1].n + 1);
+      const nums = ss.length === 1 ? `S${a.n}`
+        : seguides ? `S${a.n}–S${b.n}`
+        : ss.map((s) => "S" + s.n).join(", ");
       el.textContent = ss.length === 1
-        ? `S${a.n} · ${fmtShort(a.date)}`
-        : `S${a.n}–S${b.n} · ${fmtShort(a.date)} – ${fmtShort(b.date)}`;
+        ? `${nums} · ${fmtShort(a.date)}`
+        : `${nums} · ${fmtShort(a.date)} – ${fmtShort(b.date)}`;
     });
     document.querySelectorAll("[data-unit-sessions]").forEach((el) => {
       const ss = plan().sessions.filter((s) => s.ses.u === el.dataset.unitSessions);
       if (!ss.length) { el.remove(); return; }
       el.innerHTML = `<table><thead><tr><th>Sessió</th><th>Data</th><th>Què fem</th></tr></thead><tbody>
         ${ss.map((s) => `<tr><td>S${s.n}</td><td>${cap(fmtLong(s.date))}, ${C.torns[s.torn].inici}</td><td>${esc(s.ses.tema)}</td></tr>`).join("")}
+      </tbody></table>`;
+    });
+  }
+
+  /* ---------- taula d'exàmens ---------- */
+  function buildExams() {
+    const C = window.CURS;
+    document.querySelectorAll("[data-examens]").forEach((el) => {
+      if (!C.examens || !C.examens.length) { el.remove(); return; }
+      const now = new Date();
+      el.innerHTML = `<table><thead><tr><th>Examen</th><th>Torn de matí</th><th>Torn de vesprada</th><th>Què entra</th></tr></thead><tbody>
+        ${C.examens.map((ex) => {
+          const cel = (torn) => {
+            const p = ex.proves.find((x) => x.torn === torn);
+            if (!p) return "—";
+            const d = parseDate(p.data);
+            const [h, m] = p.fi.split(":").map(Number);
+            const fi = new Date(d); fi.setHours(h, m, 0, 0);
+            const txt = `${cap(fmtLong(d))}<br><small>${p.inici}–${p.fi}</small>`;
+            return fi < now ? `<span class="cal-past">${txt}</span>` : txt;
+          };
+          return `<tr><td><b>${esc(ex.av)}</b></td><td>${cel("matí")}</td><td>${cel("vesprada")}</td><td>${esc(ex.conte || "")}</td></tr>`;
+        }).join("")}
       </tbody></table>`;
     });
   }
@@ -331,6 +402,7 @@ builtins.input = _input
     buildTicket();
     buildCalendar();
     buildUnitSessions();
+    buildExams();
     buildRunners();
     buildQuizzes();
   }

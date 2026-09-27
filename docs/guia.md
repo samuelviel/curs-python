@@ -65,13 +65,21 @@ El mòdul té sis resultats d'aprenentatge (RA), fixats pel Decret 114/2025. Cad
 | RA5 | Fa entrada i eixida d'informació; usa llibreries | 10% | UD3, UD5 |
 | RA6 | Manipula informació amb tipus de dades avançats | 20% | UD4 |
 
+## Dates dels exàmens
+
+Cada avaluació té dues convocatòries, sempre en **dijous**: una pensada per a l'alumnat del torn de matí i l'altra per al de vesprada. **Et presentes només a una.**
+
+<div class="exam-table" data-examens markdown="0"></div>
+
+Pots triar la convocatòria de l'altre torn si et va millor i hi ha places; cal preinscriure's a Aules amb antelació. **El dia d'examen no hi ha classe ordinària**: ho veuràs marcat al [calendari](calendari.md).
+
 ## Com es calcula la nota
 
 ### Opció 1: avaluació contínua
 
 | Apartat | Pes | Què és |
 |---|---|---|
-| Exàmens presencials | 80% | Un per trimestre. Cal traure almenys un 3 en cadascun i un 4 en el de la 3a avaluació, perquè és acumulatiu. |
+| Exàmens presencials | 80% | Un per avaluació (19 o 26 de novembre, 4 o 11 de febrer i 6 o 13 de maig). Cal traure almenys un 3 en cadascun i un 4 en el de la 3a avaluació, perquè és acumulatiu. |
 | Tasques d'Aules | 15% | Una per unitat i el projecte final. Lliurades en temps i forma. |
 | Participació en fòrums | 5% | Preguntar, respondre i ajudar amb respecte. |
 
@@ -87,7 +95,7 @@ Examen amb les mateixes condicions que l'ordinària, a mitjan juny, per a qui no
 
 !!! warning "Als exàmens"
 
-    Porta un document oficial amb foto (DNI, passaport o permís de conduir). Examen amb ordinador del centre, Thonny i sense Internet ni IA. Pots triar torn si hi ha places, preinscrivint-te a Aules.
+    Porta un document oficial amb foto (DNI, passaport o permís de conduir). Examen amb ordinador del centre, Thonny i sense Internet ni IA. Els exàmens duren 1 h 50 min: hi ha temps de sobra per a llegir bé l'enunciat i provar el codi.
 
 <p class="small-note">Aquest resum segueix la guia didàctica del mòdul. En cas de dubte, preval el document oficial publicat a Aules.</p>
 

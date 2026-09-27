@@ -63,20 +63,21 @@ Un qüestionari (`p` pregunta, `o` opcions, `c` índex correcte començant per 0
 
 Caixes: `!!! tip "Títol"`, `!!! warning "Títol"`, `!!! tasca "T1 · Títol"` (tasca d'Aules), `!!! asix "Títol"` (connexió amb sistemes) i `??? question "Títol"` (desplegable).
 
-A una unitat, `<div data-unit-sessions="ud1" markdown="0"></div>` mostra la taula amb les seues sessions i dates.
+A una unitat, `<div data-unit-sessions="ud1" markdown="0"></div>` mostra la taula amb les seues sessions i dates. `<div data-examens markdown="0"></div>` mostra la taula d'exàmens.
 
 ## El calendari
 
 No s'escriuen dates a mà. `docs/assets/js/curs.js` conté:
 
-- `sessions`: la llista ordenada del que es fa a cada classe (S1, S2…) i a quina unitat enllaça.
+- `sessions`: la llista ordenada del que es fa a cada classe (S1, S2…) i a quina unitat enllaça. `repas: true` marca les sessions de repàs.
+- `examens`: les dues convocatòries de cada avaluació (data, torn i hora) i què entra. **El dia d'un examen no hi ha classe ordinària**: la sessió que tocava passa al següent dia lectiu, i l'examen apareix al calendari, a la taula `data-examens` i, quan toca, al bitllet de la portada.
 - `calendari.noLectius`: festius i vacances. Una sessió que cau en festiu passa al següent dia de classe.
 - `calendari.paritat`: com es tria el torn de cada setmana.
   - `"iso"` (per defecte): setmana ISO parella → dijous, senar → dimecres. Tornada de Nadal: **dijous 14 de gener**.
   - `"alterna"`: s'alterna cada setmana natural des de la primera classe. Tornada de Nadal: **dijous 7 de gener**.
   La diferència apareix perquè 2026 té 53 setmanes ISO. Confirma amb el centre quin criteri s'aplica.
 
-Si afegeixes o lleves sessions, el calendari, la portada i les taules de cada unitat es recalculen soles.
+Si afegeixes o lleves sessions, o canvies una data d'examen, el calendari, la portada i les taules de cada unitat es recalculen soles.
 
 
 ## Sobre les versions
@@ -86,4 +87,3 @@ Material for MkDocs està en mode manteniment (només correccions) i **no és co
 ## Llicència
 
 Continguts sota [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca). Idea inspirada en el [curs de Python d'Enrique Iborra](https://enriqueiborra.github.io/python/index.html).
-# curs-phyton

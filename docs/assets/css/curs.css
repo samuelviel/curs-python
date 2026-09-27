@@ -136,7 +136,6 @@
 .md-typeset .cal-list > li.cal-past { opacity: .55; }
 .md-typeset .cal-list > li.cal-now { background: linear-gradient(90deg, var(--curs-marker-soft), transparent 85%); }
 .md-typeset .cal-list > li.cal-now::before { background: var(--curs-marker); }
-.md-typeset .cal-list > li.cal-exam::before { border-radius: 3px; border-color: var(--curs-warn); background: var(--curs-warn-soft); }
 .md-typeset .cal-list > li.cal-off { color: var(--curs-warn); font-style: italic; }
 .md-typeset .cal-list > li.cal-off::before { border-color: var(--curs-line); }
 .md-typeset .cal-list > li.cal-off .cal-date { text-decoration: line-through; font-weight: 400; }
@@ -187,3 +186,13 @@
 /* Targetes de la portada en dues columnes */
 @media (min-width: 45em) { .md-typeset .grid.cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .md-typeset .hero-title { font-size: 1.7rem; } }
+
+/* ---------- exàmens ---------- */
+.md-typeset .exam-table table { margin: .8em 0; }
+.md-typeset .exam-table td small { color: var(--md-default-fg-color--light); }
+.md-typeset .exam-table .cal-past { opacity: .5; text-decoration: line-through; }
+.md-typeset .cal-list > li.cal-exam { background: linear-gradient(90deg, var(--curs-warn-soft), transparent 85%); }
+.md-typeset .cal-list > li.cal-exam::before { border-radius: 3px; border-color: var(--curs-warn); background: var(--curs-warn-soft); }
+.md-typeset .cal-list > li.cal-exam .cal-n { color: var(--curs-warn); font-weight: 700; }
+.md-typeset .cal-list > li.cal-repas::before { background: var(--curs-marker); border-color: var(--curs-ink); }
+.ticket-top.ticket-exam .ticket-label { color: var(--curs-warn); font-weight: 800; }

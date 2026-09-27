@@ -49,7 +49,7 @@ No cal saber programar. Sí que cal constància: uns 20 minuts de pràctica quas
 
     ---
 
-    Un per trimestre, amb ordinador del centre i sense Internet. [Com s'avalua](guia.md#com-es-calcula-la-nota)
+    Un per avaluació, en dijous i amb dues convocatòries: 19 o 26 de novembre, 4 o 11 de febrer i 6 o 13 de maig. [Dates i criteris](guia.md#dates-dels-examens)
 
 </div>
 
