@@ -196,3 +196,14 @@
 .md-typeset .cal-list > li.cal-exam .cal-n { color: var(--curs-warn); font-weight: 700; }
 .md-typeset .cal-list > li.cal-repas::before { background: var(--curs-marker); border-color: var(--curs-ink); }
 .ticket-top.ticket-exam .ticket-label { color: var(--curs-warn); font-weight: 800; }
+
+/* ---------- logotips dins del text ---------- */
+.md-typeset img.logo {
+  background: #ffffff;
+  border: 1px solid var(--curs-line);
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  clear: both;
+}
+@media (max-width: 600px) { .md-typeset img.logo { width: 80px !important; } }

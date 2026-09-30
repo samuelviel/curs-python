@@ -22,7 +22,11 @@ Abans de programar necessitem dues coses: l'intèrpret de Python, que executa el
 
 ## Per què Python i per què Thonny
 
+![Logotip de Python](../assets/img/logo-python.png){ .logo align=right width="110" }
+
 **Python** és el llenguatge més usat per a automatitzar tasques de sistemes: el trobaràs instal·lat a quasi tots els servidors Linux, i eines com Ansible estan escrites amb ell. La seua sintaxi és curta i llegible, així que et centres en la lògica i no en la puntuació.
+
+![Logotip de Thonny](../assets/img/logo-thonny.png){ .logo align=right width="110" }
 
 **Thonny** és un editor pensat per a qui comença. Porta Python integrat, mostra les variables mentre el programa s'executa i té un depurador molt senzill. Més endavant, si vols, pots passar a VS Code.
 
